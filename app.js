@@ -17,12 +17,12 @@ function goToKanban() {
 
 function logout() {
     document.getElementById('kanban-screen').classList.add('hidden');
+    document.getElementById('dashboard-screen').classList.add('hidden');
     document.getElementById('login-screen').classList.remove('hidden');
 }
-function showLoginScreen() {
-    document.getElementById("login-screen").classList.remove("hidden");
-    document.getElementById("dashboard-screen").classList.add("hidden");
-    document.getElementById("kanban-screen").classList.add("hidden");
-}
 
-showLoginScreen();
+window.onload = function() {
+    document.getElementById('login-screen').classList.remove('hidden');
+    document.getElementById('dashboard-screen').classList.add('hidden');
+    document.getElementById('kanban-screen').classList.add('hidden');
+}

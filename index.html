@@ -7,29 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="login-screen" class="screen">
+    <div id="login-screen">
         <h2>Login</h2>
-        <input type="text" id="username" placeholder="Usuário">
-        <input type="password" id="password" placeholder="Senha">
+        <input id="username" placeholder="Usuário" />
+        <input id="password" type="password" />
         <button onclick="login()">Entrar</button>
     </div>
-    <div id="dashboard-screen" class="screen hidden">
+
+    <div id="dashboard-screen" class="hidden">
         <h2>Dashboard</h2>
         <button onclick="goToKanban()">Ir para Kanban</button>
-        <div id="metrics">
-            <p>Horas Trabalhadas Hoje: <span id="hoursToday">0</span></p>
-            <p>Projetos Ativos: <span id="activeProjects">3</span></p>
-        </div>
-    </div>
-    <div id="kanban-screen" class="screen hidden">
-        <h2>Kanban</h2>
         <button onclick="logout()">Sair</button>
-        <div class="kanban">
-            <div class="column"><h3>To Do</h3><div class="card">Tarefa 1</div></div>
-            <div class="column"><h3>Doing</h3><div class="card">Tarefa 2</div></div>
-            <div class="column"><h3>Done</h3><div class="card">Tarefa 3</div></div>
-        </div>
     </div>
+
+    <div id="kanban-screen" class="hidden">
+        <h2>Kanban</h2>
+        <div class="kanban-board">
+            <div class="kanban-column">
+                <h3>Pendentes</h3>
+                <div class="kanban-task">Tarefa 1</div>
+            </div>
+            <div class="kanban-column">
+                <h3>Em Andamento</h3>
+                <div class="kanban-task">Tarefa 2</div>
+            </div>
+            <div class="kanban-column">
+                <h3>Concluídas</h3>
+                <div class="kanban-task">Tarefa 3</div>
+            </div>
+        </div>
+        <button onclick="logout()">Sair</button>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
